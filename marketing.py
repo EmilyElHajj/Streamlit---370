@@ -387,7 +387,7 @@ with platforms:
        data_frame=df,
        x="NumWebVisitsMonth",
        y="NumWebPurchases",
-       color="Purchaser_categories"
+       color="Generation"
        )
        col1a.write(fige)
 
