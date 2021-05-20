@@ -75,13 +75,13 @@ df['Income_categories'] = np.select(conditions, values)
 df['Purchases']=df['MntWines']+df['MntFruits']+df['MntMeatProducts']+df['MntFishProducts']+df['MntSweetProducts']+df['MntGoldProds']
 df['Transactions']=df['NumWebPurchases']+df['NumCatalogPurchases']+df['NumStorePurchases']
 
-df = df[df['Transactions'] > 1] #We keep customers with repeated purchases, implying number of transactions must be at least 2
-df = df[df['Purchases'] > 0]
+#df = df[df['Transactions'] > 1] #We keep customers with repeated purchases, implying number of transactions must be at least 2
+#df = df[df['Purchases'] > 0]
 
 df['AcceptedCmpTotal']=df['AcceptedCmp4']+df['AcceptedCmp5']+df['AcceptedCmp3']+df['AcceptedCmp2']+df['AcceptedCmp1']
 
 conditions = [
-    (df['Purchases'] >= 7) & (df['Purchases'] <= 200),
+    (df['Purchases'] >= 0) & (df['Purchases'] <= 200),
     (df['Purchases'] > 200) & (df['Purchases'] <= 600),
     (df['Purchases'] > 600) & (df['Purchases'] <= 1000),
     (df['Purchases'] > 1000) & (df['Purchases'] <= 2000),
