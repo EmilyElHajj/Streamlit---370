@@ -32,14 +32,12 @@ st.markdown(
    ,
    unsafe_allow_html=True
 )
-#image1= Image.open('mrk2.png')
-#d0cfe3
-#st.image('C:\Users\LENOVO\Desktop\mrk2.png', Caption=None)
+
 st.title("Marketing Analytics Dashboard")
 st.write("Via this dashboard, you as a marketer will gain better insights on your customers **demographics**, **behaviour** and their **preferred marketing campaigns**. You will also get the chance to predict  based on the customer demographics if they will respond to a campaign or not. ")
 st.write("Explore the dataset content and columns.")
 
-df = pd.read_excel(r"marketing_campaign.xlsx")
+df = pd.read_csv(r"marketing_campaign - Copy.csv")
 
 df.dropna(subset = ["Income"], inplace=True)
 df=df[(df['Income']<600000) & (df['Income']  >3000)]
