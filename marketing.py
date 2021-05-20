@@ -444,9 +444,9 @@ with ml:
     purchases = st.slider('Slide to select purchases of customer',min_value=0, max_value=3000)
     st.subheader('Select customers customers transactions:')
     trans = st.slider('Slide to select customer transactions',min_value=0, max_value=50)
-    st.subheader('How many campaigns did the customer accept?:')
+    st.subheader('How many campaigns did the customer accept?')
     acc = st.slider('Slide to select number of accepted campaigns',min_value=0, max_value=4)
-
+    st.subheader('Select Customers Education level:')
     ed = st.selectbox('Select Education ', ['Graduation','Master','PhD','2n Cycle','Basic'])
 
 if ed == 'Graduation':
