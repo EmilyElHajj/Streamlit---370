@@ -39,7 +39,7 @@ st.title("Marketing Analytics Dashboard")
 st.write("Via this dashboard, you as a marketer will gain better insights on your customers **demographics**, **behaviour** and their **preferred marketing campaigns**. You will also get the chance to predict  based on the customer demographics if they will respond to a campaign or not. ")
 st.write("Explore the dataset content and columns.")
 
-df = pd.read_csv(r"C:\Users\LENOVO\Desktop\marketing_campaign - Copy.csv")
+df = pd.read_excel(r"C:\Users\LENOVO\Desktop\marketing_campaign.xlsx")
 
 df.dropna(subset = ["Income"], inplace=True)
 df=df[(df['Income']<600000) & (df['Income']  >3000)]
