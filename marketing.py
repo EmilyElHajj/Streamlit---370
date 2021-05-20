@@ -51,7 +51,7 @@ conditions = [
     ]
 
 # create a list of the values we want to assign for each condition
-values = ['Silent', 'Baby Bommer', 'GenZ','GenY','GenZ']
+values = ['Silent', 'Baby Bommer', 'GenX','GenY','GenZ']
 
 # create a new column and use np.select to assign values to it
 df['Generation'] = np.select(conditions, values)
